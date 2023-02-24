@@ -1,0 +1,86 @@
+<ng-template #content let-modal>
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-title">Bắt đầu làm bài</h4>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close button"
+    aria-describedby="modal-title"
+    (click)="modal.dismiss('Cross click')"
+  ></button>
+</div>
+<div class="modal-body">
+  <p>
+    <strong>Bạn xác nhận muốn làm bài <span class="text-primary">{{item.examName}}</span>?</strong>
+  </p>
+  <p>
+    Sau khi bắt đầu làm bài sẽ đếm ngược thời gian
+  </p>
+</div>
+<div class="modal-footer">
+  <button type="button" ngbAutofocus class="btn btn-danger" (click)="attempt(item.examId)">Ok</button>
+  <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancel</button>
+</div>
+</ng-template>
+<div id="__nuxt">
+  <div id="__layout">
+    <div class="flex flex-col font-sans">
+      <div class="fixed left-0 bottom-0 z-102 flex flex-col">
+        <div class="flex flex-col">
+        </div>
+      </div>
+      <!---->
+      <!---->
+      <!---->
+      <!---->
+      <!---->
+      <a aria-label="Skip to main content" href="https://quizizz.com/admin#app-body-container" class="skip-link">
+        <span class="_i18n-container">Chuyển đến nội dung</span>
+      </a>
+      <div class="flex flex-grow h-screen">
+        <app-sidebar></app-sidebar>
+        <div class="flex flex-col flex-grow w-full h-screen overflow-hidden border-l border-light-1">
+          <app-header></app-header>
+          <div id="app-body-container" class="flex flex-grow overflow-auto bg-light-1 content overflow-auto">
+            <div data-v-470c518d="" class="w-full">
+              <div data-v-470c518d="" class="w-full">
+                <div class="card">
+                  <div class="card-title mt-4 ml-4">
+                    <a (click)="back()" class="link-secondary" style="cursor: pointer">Quay lại</a>
+                    <h5 class="mt-2">{{category.categoryName}}/Danh sách exam</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-10 mx-auto">
+                        <div class="career-search mb-60">
+                          <div class="filter-result">
+                            <div *ngFor="let exam of exams" class="job-box d-md-flex align-items-center justify-content-between mb-30" style = "background-color: #dee9ed;">
+                              <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
+                                <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex"> EXAM</div>
+                                <div class="job-content">
+                                  <h5 class="text-center text-md-left">{{exam.examName}}</h5>
+                                  <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                    <li class="mr-md-4"> <i class="zmdi zmdi-pin mr-2"></i> Danh mục : {{category.categoryName}} |</li>
+                                    <li class="mr-md-4"> <i class="zmdi zmdi-pin mr-2"></i> Thời gian : {{exam.hours}} giờ {{exam.mins}} phút {{exam.secs}} giây</li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="job-right my-4 flex-shrink-0"> <a (click)="open(content,exam)" class="btn d-block w-100 d-sm-inline-block btn-light">Làm bài</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---->
+            </div>
+          </div>
+        </div>
+       
+            </div>
+          </div>
+        </div>
+        

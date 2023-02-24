@@ -1,0 +1,61 @@
+<ng-template #loginContent let-modal>
+  <div class="jumbotron bg-transparent text-center">
+    <div class="card text-center">
+      <div class="modal-header">
+        <h4 id="modal-basic-title" class="modal-title">Đăng nhập với google</h4>
+        <button type="button" aria-label="Close" class="btn-close" (click)="closeModal()"></button>
+      </div>
+        <app-login></app-login>
+    </div>
+  </div>
+</ng-template>
+<div data-v-8d679f4e="">
+  <div data-v-8d679f4e="" id="app-header" class="fixed border-light-1 main-header z-10 border-b">
+    <nav data-v-8d679f4e="" class="bg-light text-dark-3 flex flex-row relative justify-between space-x-2 h-auto p-2">
+      <!----> <!----> <div data-v-8d679f4e="" class="flex flex-row space-x-2 flex-none md:flex-grow">
+        <div data-v-8d679f4e="" class="ml-auto flex flex-grow">
+          <div data-v-279c77e4="" data-v-8d679f4e="" class="main-header-search-bar border-light-1">
+            <div data-v-279c77e4="" class="w-full">
+              <div data-v-4d9b13aa="" class="flex-grow relative w-full border-radius-inherit">
+                <!----> <div data-v-4d9b13aa="" class="relative border-radius-inherit">
+                  <div data-v-4d9b13aa="" class="w-6 h-6 flex items-center justify-center absolute left-2 top-2 text-dark-4">
+                    <i data-v-4d9b13aa="" class="fas fa-search text-purple mt-0.5" style="font-size: 12px;">
+                    </i>
+                  </div> <input data-v-4d9b13aa="" id="search-input" name="" placeholder="Tìm kiếm" autocomplete="off" lang="" maxlength="-1" type="text" class="focus:outline-none h-10  w-full py-2 text-sm placeholder-sm border-radius-inherit remove-number-selector rounded-tl-lg rounded-bl-lg bg-transparent text-dark-2 border-light-3 placeholder-dark-2 font-semibold pl-9 pr-2"> <!----> <!----> <!----> <!---->
+                </div> <!---->
+              </div> <!---->
+            </div> <div data-v-279c77e4="" class="divider border-r my-2 border-dark-5">
+            </div> <!----> 
+            </div>
+      </div> <div data-v-8d679f4e="" class="flex space-x-2 flex-row pl-0 md:pl-2">
+        <!----> <button data-v-21793d1b="" data-v-8d679f4e="" class="flex items-center justify-center px-4 py-1 text-sm font-semibold h-auto bg-dark-5% active:bg-dark-10% text-dark-2 hover:text-dark-3  rounded other min-w-max relative transition-colors duration-200 ease-in-out flex">
+          <!----> <!---->  <span data-v-21793d1b="" class="title">
+            Nhập mã
+          </span> <!----> <!----> <!----> <!----> <!---->
+        </button> <div data-v-8d679f4e="" class="flex" *ngIf = "!isLoggedIn">
+          <button data-v-21793d1b="" data-v-8d679f4e="" class="mr-2 flex items-center justify-center px-4 py-1 text-sm font-semibold h-auto base bg-lilac-faded text-lilac hover:text-lilac-light active:text-lilac-dark rounded secondary min-w-max relative transition-colors duration-200 ease-in-out flex">
+               <!-- <span data-v-21793d1b="" class="title" (click) = "navigateLogin()"> -->
+                <span data-v-21793d1b="" class="title" (click) = "open(loginContent)">
+              Đăng nhập
+            </span> <!----> <!----> <!----> <!----> <!---->
+          </button> <button data-v-21793d1b="" data-v-8d679f4e="" class="flex items-center justify-center px-4 py-1 text-sm font-semibold h-auto base bg-lilac text-light-3 hover:bg-lilac-light active:bg-lilac-dark rounded primary min-w-max relative transition-colors duration-200 ease-in-out flex">
+            <!----> <!---->  <span data-v-21793d1b="" class="title">
+              Đăng ký
+            </span> <!----> <!----> <!----> <!----> <!---->
+          </button>
+        </div>
+        <!----test-->
+        <div data-v-8d679f4e="" class="flex" *ngIf = "isLoggedIn">
+          xin chào {{user.name}}
+          <button data-v-21793d1b="" data-v-8d679f4e="" class="mr-2 flex items-center justify-center px-4 py-1 text-sm font-semibold h-auto base bg-lilac-faded text-lilac hover:text-lilac-light active:text-lilac-dark rounded secondary min-w-max relative transition-colors duration-200 ease-in-out flex">
+            <!----> <!---->  <span data-v-21793d1b="" class="title" (click) = "logout()">
+              Logout
+            </span> <!----> <!----> <!----> <!----> <!---->
+          </button>
+          </div>
+        <!------>
+      </div>
+    </div>
+  </nav>
+  </div> <!---->
+  </div>

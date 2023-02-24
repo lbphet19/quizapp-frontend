@@ -1,0 +1,72 @@
+<div id="__nuxt">
+  <div id="__layout">
+    <div class="flex flex-col font-sans">
+      <div class="fixed left-0 bottom-0 z-102 flex flex-col">
+        <div class="flex flex-col">
+        </div>
+      </div>
+      <!---->
+      <!---->
+      <!---->
+      <!---->
+      <!---->
+      <a aria-label="Skip to main content" href="https://quizizz.com/admin#app-body-container" class="skip-link">
+        <span class="_i18n-container">Chuyển đến nội dung</span>
+      </a>
+      <div class="flex flex-grow h-screen">
+        <app-sidebar></app-sidebar>
+        <div class="flex flex-col flex-grow w-full h-screen overflow-hidden border-l border-light-1">
+          <app-header></app-header>
+          <div id="app-body-container" class="flex flex-grow overflow-auto bg-light-1 content overflow-auto">
+            <div data-v-470c518d="" class="w-full">
+              <div data-v-470c518d="" class="w-full">
+                
+                  <div class="card">
+                    <div class="card-body">
+                    <div class="card-title"><h5><b>Thêm mới quiz</b></h5></div>
+                    <br>
+                <form [formGroup] = "quizCreateForm">
+                  <div class="form-group mb-3">
+                    <label for="quizName">Tên Quiz</label>
+                    <input type="text" class="form-control mt-2" id="quizName" placeholder="Nhập tên quiz"
+                    formControlName="quizName">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                  </div>
+                  <div>
+                  <!-- cate -->
+                  Danh mục
+                  <select class="form-select mr-sm-2" id="quizCategory"
+                  style="margin-top:0.5em; margin-bottom: 1em;" formControlName = "quizCategory">
+                    <option selected>Choose...</option>
+                    <option *ngFor = "let cat of quizCategories|async" value={{cat.id}}>
+                      {{cat.categoryName}}
+                    </option>
+                  </select>
+                </div>
+                  <div class="form-group mb-3">
+                    <label for="descriptions">Mô tả</label>
+                    <input type="text" class="form-control mt-2" id="descriptions" placeholder="Mô tả"
+                    formControlName="descriptions">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                  </div>
+                  
+                  <label class="mr-sm-2" for="quizStatus">Status</label>
+                  <select class="form-select mr-sm-2" id="quizStatus"
+                  style = "margin-top:0.5em; margin-bottom: 1em;"
+                  formControlName="quizStatus">
+                    <option selected>Choose...</option>
+                    <option value="true">Public</option>
+                    <option value="false">Private</option>
+                  </select>
+                  <button style="margin-top:20px" type="submit" class="btn btn-primary mt-2" (click) = "submit()">Tạo mới</button>
+                </form>
+              </div>
+              </div>
+              </div>
+              <!---->
+            </div>
+          </div>
+        </div>
+            </div>
+          </div>
+        </div>

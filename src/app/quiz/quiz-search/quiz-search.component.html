@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)https://quizizz.com/admin -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Find a Quiz - Quizizz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta hid="description" name="description" content="" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://quizizz.com/favicon.ico"
+    />
+    <meta
+      name="twitter:image"
+      content="https://cf.quizizz.com/img/q_og_generic.png"
+    />
+    <meta
+      property="og:image"
+      content="https://cf.quizizz.com/img/q_og_generic.png"
+    />
+    <meta
+      name="twitter:title"
+      content="Quizizz — The world’s most engaging learning platform"
+    />
+    <meta
+      property="og:title"
+      content="Quizizz — The world’s most engaging learning platform"
+    />
+    <meta
+      name="twitter:description"
+      content="Find and create gamified quizzes, lessons, presentations, and flashcards for students, employees, and everyone else. Get started for free!"
+    />
+    <meta
+      property="og:description"
+      content="Find and create gamified quizzes, lessons, presentations, and flashcards for students, employees, and everyone else. Get started for free!"
+    />
+    
+    <link href="https://www.googletagmanager.com/" rel="preconnect" />
+    <link
+      data-n-head="1"
+      rel="icon"
+      type="image/x-icon"
+      href="https://quizizz.com/favicon.ico"
+    />
+    <!-- <link data-n-head="1" rel="stylesheet" href="./css2.css"> -->
+    <meta
+      data-n-head="1"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <meta
+      data-n-head="1"
+      data-hid="description"
+      name="description"
+      content=""
+    />
+    <meta
+      data-n-head="1"
+      data-hid="t-type"
+      name="twitter:image"
+      content="https://cf.quizizz.com/img/q_og_generic.png"
+    />
+  </head>
+  <body class="using-mouse">
+    
+    <div id="__nuxt">
+      <div id="__layout">
+        <div class="flex flex-col font-sans">
+          <div class="fixed left-0 bottom-0 z-102 flex flex-col">
+            <div class="flex flex-col"></div>
+          </div>
+          <!---->
+          <!---->
+          <!---->
+          <!---->
+          <!---->
+          <a
+            aria-label="Skip to main content"
+            href="https://quizizz.com/admin#app-body-container"
+            class="skip-link"
+          >
+            <span class="_i18n-container">Chuyển đến nội dung</span>
+          </a>
+          <div class="flex flex-grow h-screen">
+            <app-sidebar></app-sidebar>
+            <div
+              class="flex flex-col flex-grow w-full h-screen overflow-hidden border-l border-light-1"
+            >
+              <app-header></app-header>
+              <div
+                id="app-body-container"
+                class="flex flex-grow overflow-auto bg-light-1 content overflow-auto"
+              >
+                <div data-v-470c518d="" class="w-full">
+                  <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-center" *ngIf="isLoading">
+                            <div class="spinner-border" role="status">
+                              <span class="sr-only">Loading...</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-wrap" style="gap:32px">
+                          <a style="text-decoration: none; width:18rem" *ngFor = "let child of categories" (click) = "navigate(child.id)" class="rounded-xl bg-light-3 m-2 text-left ring-1 ring-dark-10% flex-shrink-0 mb-4 md:mb-8 cursor-pointer hover:shadow-lg h-60 md:h-72 max-w-56 md:max-w-72" title="Luyện tập " aria-label="Luyện tập , 17 Slides">
+                                      
+                                      
+                            <div class="overflow-hidden rounded-t-xl h-full">
+                              <!-- <div *ngIf = "child.quizImage !== null">
+                                <img [src]="quiz.quizImage" alt="../../../assets/images/quiz-img-test.jfif" class="w-44 md:w-60 h-28 md:h-40 object-cover">
+                              </div>
+                              <div *ngIf = "quiz.quizImage === null"> -->
+                                <img src = "https://cdn.pixabay.com/photo/2021/02/03/05/37/question-mark-5976736_960_720.png" class="w-44 md:w-60 h-28 md:h-40 object-cover">
+                             
+                              <div aria-hidden="true" class="px-2.5 pt-2.5 pb-3.5 flex flex-col h-30">
+                                <div class="flex items-center">
+                                  <div data-v-61563e2e="" class="bg-light-1 text-dark-3 lozenge inline-flex items-center text-tn font-semibold rounded-full px-1.5 ">
+                                    <!---->
+                                    <!---->
+                                    <span data-v-61563e2e="" class="">QUIZ</span>
+                                  </div>
+                                  
+                                  <!---->
+                                </div>
+                                <div title="{{child.categoryName}} " class="mt-2 mb-4 text-sm md:text-base text-dark-2 font-semibold" style="text-decoration: none;">
+                                  {{child.categoryName}}
+                                </div>
+                                <div class="flex text-tn md:text-xs text-dark-4 font-semibold mt-auto">
+                                  <div class="mr-1.5 ml-1.5">
+                                    <!-- By {{quiz.authorName}} -->
+                                    By ...
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script src="script.js" nonce=""></script>
+              <!-- for jsFile in serverData.asyncJsFiles-->
+              <!--   script(src="#{serverData.cdnPrefix}#{jsFile}")-->
+              <!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
